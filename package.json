@@ -1,0 +1,35 @@
+{
+    "name": "langchain-example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "runagent": "ts-node src/travelAssistant.ts",
+        "buildDb": "node src/generateDb",
+        "query": "node src/runQuery",
+        "startServer": "node src/server"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@langchain/community": "^0.3.33",
+        "@langchain/core": "^0.3.18",
+        "@langchain/langgraph": "^0.2.20",
+        "@langchain/ollama": "^0.1.2",
+        "axios": "^1.7.7",
+        "cherio": "1.0.0-rc.2",
+        "express": "^4.21.1",
+        "mysql2": "^3.11.4",
+        "ollama": "^0.5.9",
+        "sequelize": "^6.37.5",
+        "typescript": "^5.7.3",
+        "uuid": "^11.0.3",
+        "vectra": "^0.9.0",
+        "zod": "^3.24.2"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "5.8.2"
+    }
+}
