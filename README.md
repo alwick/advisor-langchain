@@ -1,1 +1,1 @@
-# langchain-example
+[# langchain-example](https://langchain-ai.github.io/langgraphjs/how-tos/multi-agent-network/#travel-recommendations-example)

@@ -1,18 +1,20 @@
 import { ChatOpenAI } from "@langchain/openai";
-// import { Ollama } from "@langchain/ollama";
+import { ChatOllama } from "@langchain/ollama";
 import { makeAgentNode } from "./agentModel.js";
 import { MessagesAnnotation, StateGraph } from "@langchain/langgraph";
 
-export const model = new ChatOpenAI({
-    model: "gpt-3.5-turbo",
-    apiKey:"",
-    temperature: 0.1,
-  });
+const { openaiKey } = process.env;
 
-// export const model = new Ollama({
-//     model: "llama3.3",
+// export const model = new ChatOpenAI({
+//     model: "o3-mini",
+//     apiKey: openaiKey,
 //     temperature: 0.1,
 //   });
+
+export const model = new ChatOllama({
+    model: "llama3.2",
+    temperature: 0.1,
+  });
 
 export const start = async () => {
 

@@ -5,7 +5,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "runagent": "ts-node src/travelAssistant.ts",
+        "runagent": "ts-node --env-file=.env src/travelAssistant.ts",
         "buildDb": "node src/generateDb",
         "query": "node src/runQuery",
         "startServer": "node src/server"
