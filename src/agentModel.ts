@@ -14,9 +14,10 @@ export const makeAgentNode = (params: {
       // - name of the node to go to next (or '__end__')
       const responseSchema = z.object({
         response: z.string().describe(
-          "A human readable response to the original question. Does not need to be a final response. Will be streamed back to the user."
+          "A human readable response to the original question. Does not need to be a final response. The response will be streamed back to the user."
         ),
-        goto: z.enum(possibleDestinations).describe("The next agent to call, or __end__ if the user's query has been resolved. Must be one of the specified values."),
+        goto: z.enum(possibleDestinations)
+        .describe("The next agent to call, or __end__ if the user's query has been resolved. Must be one of the specified values. Ensure you are responding with one of the specified values"),
       });
       const messages = [
         {

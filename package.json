@@ -5,10 +5,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "runagent": "ts-node --env-file=.env src/travelAssistant.ts",
-        "buildDb": "node src/generateDb",
-        "query": "node src/runQuery",
-        "startServer": "node src/server"
+        "runagent": "node --env-file=.env dist/travelAssistant.js",
+        "startServer": "node --env-file=.env dist/server.js"
     },
     "author": "",
     "license": "ISC",
@@ -29,6 +27,7 @@
         "zod": "^3.24.2"
     },
     "devDependencies": {
+        "@types/express":"^5.0.1",
         "ts-node": "^10.9.2",
         "typescript": "5.8.2"
     }
