@@ -16,11 +16,11 @@ app.use(express.json()); // for parsing application/json
 
 app.use("/", express.static(path.join(__dirname, '../public')));
 
-app.get("/getReccomendation", async (req: any, res: any, next: any) => {
-  const query: string = req.query.query;
+app.post("/getReccomendation", async (req: any, res: any, next: any) => {
+  const question: string = req.body.question;
 
   try {
-    const response = await askQuestion(query);
+    const response = await askQuestion(question);
 
     res.json(response);
   } catch (error) {
