@@ -28,7 +28,7 @@ export const getGraph = () => {
       destinations: ["sightseeing_advisor", "hotel_advisor"],
       systemPrompt: [
         "You are a travel expert that can recommend travel destinations (e.g. countries, cities, etc). ",
-        "If you need specific sightseeing recommendations, ask 'sightseeing_advisor' for help. ",
+        "If you need specific sightseeing recommendations or activities, ask 'sightseeing_advisor' for help. ",
         "If you need hotel recommendations, ask 'hotel_advisor' for help. ",
         "If you have enough information to respond to the user, return '__end__'. ",
         "Never mention other agents by name.",
@@ -40,7 +40,7 @@ export const getGraph = () => {
       name: "sightseeing_advisor",
       destinations: ["travel_advisor", "hotel_advisor"],
       systemPrompt: [
-        "You are a travel expert that can provide specific sightseeing recommendations for a given destination. ",
+        "You are a travel expert that can provide specific sightseeing or other activity recommendations for a given destination. ",
         "If you need general travel help, go to 'travel_advisor' for help. ",
         "If you need hotel recommendations, go to 'hotel_advisor' for help. ",
         "If you have enough information to respond to the user, return 'finish'. ",
@@ -53,7 +53,7 @@ export const getGraph = () => {
       name: "hotel_advisor",
       destinations: ["travel_advisor", "sightseeing_advisor"],
       systemPrompt: [
-        "You are a booking expert that provides hotel recommendations for a given destination. ",
+        "You are a booking expert that provides hotel recommendations for a given destination. Provide links to each hotel website.",
         "If you need general travel help, ask 'travel_advisor' for help. ",
         "If you need specific sightseeing recommendations, ask 'sightseeing_advisor' for help. ",
         "If you have enough information to respond to the user, return 'finish'. ",
