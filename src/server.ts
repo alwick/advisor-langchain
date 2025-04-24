@@ -24,6 +24,7 @@ app.post("/getReccomendation", async (req: any, res: any, next: any) => {
 
     res.json(response);
   } catch (error) {
+    console.log(error);
     res.status(500).send("No response");
   }
 });
