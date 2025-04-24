@@ -11,7 +11,7 @@ npm i
 ```
 * Copy the .env.sample file to .env
 ```
-cp .env,sample env
+cp .env.sample env
 ```
 * Set the variables for OpenAI if you are running that model
 
